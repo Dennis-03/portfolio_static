@@ -1,3 +1,26 @@
+/* TEMP  */
+main section {
+  /* height: 500px; */
+}
+
+/* GLOBAL  */
+main section:nth-child(odd) {
+  background-color: black;
+}
+
+main section:nth-child(even) {
+  background-color: rgb(129, 125, 125);
+}
+
+.btn-custom {
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+}
+
+/* INTRO  */
+
 .intro {
   width: 100%;
   height: 100vh;
@@ -14,14 +37,85 @@
   transform: translateY(-50%);
 }
 
-main section {
-  height: 500px;
+/* ABOUT ME  */
+.about-me {
+  padding: 50px;
 }
 
-main section:nth-child(odd) {
+.about-me-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profileimg-container {
+  width: 350px;
+  height: 350px;
+  background-color: aqua;
+}
+
+.about-me-content {
+  max-width: 550px;
+  color: #fff;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(43, 43, 43);
+}
+
+.technologies div {
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+/* EXPERIENCE */
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* .exp-item {
+
+} */
+.exp-item .icon-container {
+  /* padding: 20px; */
+  color: #fff;
+  float: left;
   background-color: black;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+  position: relative;
+  margin-right: 25px;
 }
 
-main section:nth-child(even) {
-  background-color: rgb(129, 125, 125);
+.exp-item .icon-container::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 2px;
+  width: 25px;
+  left: 40px;
+  top: 20px;
+  z-index: 1;
+}
+
+.exp-item .icon-container i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.exp-content {
+  max-width: 500px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 2;
 }
