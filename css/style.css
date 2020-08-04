@@ -80,9 +80,7 @@ main section:nth-child(even) {
   align-items: center;
   justify-content: space-evenly;
 }
-/* .exp-item {
 
-} */
 .exp-item .icon-container {
   /* padding: 20px; */
   color: #fff;
@@ -118,4 +116,57 @@ main section:nth-child(even) {
   overflow: hidden;
   background-color: #fff;
   z-index: 2;
+}
+
+/* projects */
+
+.filters ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 8px;
+  list-style: none;
+  max-width: 600px;
+  background-color: #222;
+  margin: 30px auto;
+  border-radius: 30px;
+}
+
+.filters ul li {
+  text-align: center;
+  margin-right: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.filters ul li:hover {
+  /* color: blue; */
+  font: outline;
+}
+
+.filters ul li.is-checked {
+  background-color: blue;
+}
+
+.projects .grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly !important;
+}
+
+.projects .grid-item {
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  background-color: #222;
 }
