@@ -16,25 +16,22 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <section class="intro">
-      <!-- <img
-        src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png/1200px-Hello_Web_Series_%28Wordmark%29_Logo.png"
-        alt=""
-        class="background-img"
-      /> -->
+      <div class="background-img"></div>
       <div class="intro-content">
         <p>Hello, My Name Is</p>
         <h2>Razan Smith</h2>
         <p>A Creative Freelancer & Full Stack Developer</p>
-        <a href="#" class="btn btn-primary">KNOW MORE</a>
+        <a href="#aboutme" class="btn btn-primary">KNOW MORE</a>
       </div>
     </section>
     <main>
-      <section class="about-me">
-        <div class="container">
+      <section id="aboutme" class="about-me">
+        <div class="container" data-aos="fade-up">
           <div class="about-me-wrapper">
             <div class="profileimg-container"></div>
             <div class="about-me-content">
@@ -181,51 +178,85 @@
               <div class="grid">
                 <div class="grid-item logic" data-category="websites">
                   <h1>1</h1>
+                  <div class="grid-content" data-aos="fade-up"></div>
                 </div>
                 <div class="grid-item flyers" data-category="flyers">
                   <h1>2</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item idea" data-category="ads">
                   <h1>3</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item code" data-category="books">
                   <h1>4</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item ui" data-category="logos">
                   <h1>5</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item ux" data-category="websites">
                   <h1>6</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item idea" data-category="ads">
                   <h1>7</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item code" data-category="books">
                   <h1>8</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item creativity" data-category="books">
                   <h1>9</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item creativity" data-category="books">
                   <h1>10</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item ux" data-category="books">
                   <h1>11</h1>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item creativity" data-category="books">
                   <h1>12</h1>
+                  <div class="grid-content"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
+
+      <section class="achievements">
+        <div class="container">
+          <div class="achievement">
+            <div class="content"></div>
+            <div class="content"></div>
+            <div class="content"></div>
+            <div class="content"></div>
+            <div class="content"></div>
+            <div class="content"></div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-me">
+        <div class="container">
+          <div class="hex-wrapper">
+            <div class="hex">
+              <a href="#"><i class="fa fa-google fa-3x google"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
 

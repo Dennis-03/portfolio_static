@@ -1,8 +1,3 @@
-/* TEMP  */
-main section {
-  min-height: 500px;
-}
-
 /* GLOBAL  */
 main section:nth-child(odd) {
   background-color: black;
@@ -21,14 +16,21 @@ main section:nth-child(even) {
 
 /* INTRO  */
 
+.background-img {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://cdn.wallpapersafari.com/74/99/M67dUT.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .intro {
   width: 100%;
   height: 100vh;
-  background-color: aqua;
+  /* background-color: aqua; */
   position: relative;
-}
-.background-img {
-  max-width: 1000px;
 }
 
 .intro-content {
@@ -123,7 +125,7 @@ main section:nth-child(even) {
 
 /* projects */
 
-.filters ul {
+.projects .filters ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -135,7 +137,7 @@ main section:nth-child(even) {
   border-radius: 30px;
 }
 
-.filters ul li {
+.projects .filters ul li {
   text-align: center;
   margin-right: 12px;
   font-weight: 700;
@@ -149,12 +151,12 @@ main section:nth-child(even) {
   text-transform: uppercase;
 }
 
-.filters ul li:hover {
+.projects .filters ul li:hover {
   /* color: blue; */
   font: outline;
 }
 
-.filters ul li.is-checked {
+.projects .filters ul li.is-checked {
   background-color: blue;
 }
 
@@ -166,4 +168,96 @@ main section:nth-child(even) {
   width: 200px;
   height: 200px;
   background-color: #222;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.projects .grid-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 200px;
+  width: 200px;
+  z-index: 10;
+  background-color: aqua;
+}
+@media only screen and (max-width: 600px) {
+  .projects .grid-item {
+    margin: 15px;
+    width: 360px;
+    height: 360px;
+  }
+
+  .projects .grid-content {
+    height: 360px;
+    width: 360px;
+  }
+}
+
+.projects .grid-item:hover .grid-content {
+  display: block;
+}
+
+/* achievements */
+
+.achievements {
+  padding: 30px;
+}
+
+.achievement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.achievement .content {
+  margin-bottom: 30px;
+  width: 450px;
+  height: 330px;
+  background-color: aqua;
+  border-radius: 5px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+/* contact-me */
+
+.contact-me .hex-wrapper {
+  padding-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.contact-me .hex {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  background-color: aqua;
+}
+
+.contact-me .hex::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 20px solid red;
+}
+
+.contact-me .hex::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-top: 20px solid red;
+}
+
+.contact-me .hex .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
