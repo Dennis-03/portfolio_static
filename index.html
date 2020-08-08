@@ -16,21 +16,67 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="intro">
+    <nav class="navigation">
+      <div class="container">
+        <div class="nav-wrapper">
+          <ul>
+            <li>
+              <a href="#intro">
+                D
+              </a>
+            </li>
+            <li>
+              <a href="#aboutme">
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#experience">
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#projects">
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#achievements">
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#contact-me">
+                <i class="fa fa-google"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="intro" class="intro page-section">
       <div class="background-img"></div>
       <div class="intro-content">
-        <p>Hello, My Name Is</p>
-        <h2>Razan Smith</h2>
-        <p>A Creative Freelancer & Full Stack Developer</p>
-        <a href="#aboutme" class="btn btn-primary">KNOW MORE</a>
+        <div class="container">
+          <p>Hello, My Name Is</p>
+          <h2>Razan Smith</h2>
+          <p>A Creative Freelancer & Full Stack Developer</p>
+          <a href="#aboutme" class="btn btn-primary">KNOW MORE</a>
+        </div>
       </div>
     </section>
     <main>
-      <section id="aboutme" class="about-me">
+      <section id="aboutme" class="about-me page-section">
         <div class="container" data-aos="fade-up">
           <div class="about-me-wrapper">
             <div class="profileimg-container"></div>
@@ -100,7 +146,7 @@
         </div>
       </section>
 
-      <section class="experience">
+      <section id="experience" class="experience page-section">
         <div class="exp-item">
           <div class="icon-container">
             <i class="fa fa-google"></i>
@@ -159,7 +205,7 @@
         </div>
       </section>
 
-      <section class="projects">
+      <section id="projects" class="projects page-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -178,7 +224,7 @@
               <div class="grid">
                 <div class="grid-item logic" data-category="websites">
                   <h1>1</h1>
-                  <div class="grid-content" data-aos="fade-up"></div>
+                  <div class="grid-content"></div>
                 </div>
                 <div class="grid-item flyers" data-category="flyers">
                   <h1>2</h1>
@@ -230,7 +276,7 @@
         </div>
       </section>
 
-      <section class="achievements">
+      <section id="achievements" class="achievements page-section">
         <div class="container">
           <div class="achievement">
             <div class="content"></div>
@@ -242,7 +288,8 @@
           </div>
         </div>
       </section>
-      <section class="contact-me">
+
+      <section id="contact-me" class="contact-me page-section">
         <div class="container">
           <div class="hex-wrapper">
             <div class="hex">

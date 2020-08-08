@@ -1,3 +1,7 @@
+section {
+  padding: 50px;
+}
+
 /* GLOBAL  */
 main section:nth-child(odd) {
   background-color: black;
@@ -12,6 +16,45 @@ main section:nth-child(even) {
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
+}
+
+/* NAV  */
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  padding: 10px 0;
+  border-radius: 50px;
+}
+
+nav ul li {
+  padding: 10px;
+  display: inline;
+  text-decoration: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  background-color: blue;
+  padding: 8px 25px;
+  border-radius: 20px;
+  color: #fff;
 }
 
 /* INTRO  */
@@ -176,11 +219,14 @@ main section:nth-child(even) {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
+  /* display: none; */
   height: 200px;
   width: 200px;
   z-index: 10;
   background-color: aqua;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s ease-out;
 }
 @media only screen and (max-width: 600px) {
   .projects .grid-item {
@@ -196,7 +242,10 @@ main section:nth-child(even) {
 }
 
 .projects .grid-item:hover .grid-content {
-  display: block;
+  /* opacity: 1;
+  display: block; */
+  visibility: visible;
+  opacity: 1;
 }
 
 /* achievements */
