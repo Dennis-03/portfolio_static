@@ -1,10 +1,15 @@
 /* GLOBAL  */
+main section {
+  padding: 65px 0 !important;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
 main section:nth-child(odd) {
-  background-color: black;
+  background-color: #252535;
 }
 
 main section:nth-child(even) {
-  background-color: rgb(129, 125, 125);
+  background-color: #303040;
 }
 
 .btn-custom {
@@ -26,9 +31,15 @@ main section {
   padding-top: 5px;
 }
 
+.sec-header {
+  color: #fff;
+  margin: 30px 0;
+}
+
 .hyphen {
   position: relative;
   margin-left: 50px;
+  margin-bottom: 0;
 }
 
 .hyphen::after {
@@ -38,9 +49,17 @@ main section {
   left: -40px;
   height: 3px;
   width: 30px;
-  background-color: blue;
+  background: linear-gradient(to right, #4d74e6, #2a57dc);
   z-index: 300;
   border-radius: 2px;
+}
+
+.secondary {
+  color: #4d74e6;
+}
+
+.gray {
+  color: gray;
 }
 
 /* NAV  */
@@ -54,7 +73,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-around;
-  background-color: #000;
+  background-color: rgba(15, 15, 50, 1);
   padding: 10px 0;
   border-radius: 50px;
 }
@@ -77,7 +96,7 @@ nav ul li a:hover {
 }
 
 .active {
-  background-color: blue;
+  background: linear-gradient(to right, #3769ff, #2a57dc);
   border-radius: 20px;
   color: #fff;
 }
@@ -171,35 +190,40 @@ nav .logo {
   width: 350px;
   height: 350px;
   position: relative;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-me .btn-custom {
   position: absolute;
-  bottom: -20px;
+  bottom: -25px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-me-content {
-  max-width: 550px;
+  max-width: 500px;
   color: #fff;
 }
-
+.about-me-content p {
+  margin-bottom: 0;
+}
 .technologies {
+  margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(43, 43, 43);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .technologies div {
   margin: 20px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 /* EXPERIENCE */
-.experience .container {
+
+.experience .container .wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -207,10 +231,9 @@ nav .logo {
 }
 
 .exp-item .icon-container {
-  /* padding: 20px; */
+  background-color: #4d74e6;
   color: #fff;
   float: left;
-  background-color: black;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -221,7 +244,7 @@ nav .logo {
 
 .exp-item .icon-container::before {
   content: "";
-  background-color: black;
+  background-color: #4d74e6;
   position: absolute;
   height: 2px;
   width: 18px;
@@ -239,11 +262,23 @@ nav .logo {
 .exp-content {
   max-width: 450px;
   overflow: hidden;
-  background-color: #fff;
+  color: #fff;
   z-index: 2;
   margin-bottom: 30px;
-  border-left: 2px solid black;
+  border-left: 2px solid #2a57dc;
   padding: 10px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exp-content hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .exp-content {
+    max-width: 400px;
+  }
 }
 
 /* projects */
@@ -255,9 +290,9 @@ nav .logo {
   padding: 8px;
   list-style: none;
   max-width: 600px;
-  background-color: #222;
   margin: 30px auto;
   border-radius: 30px;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projects .filters ul li {
@@ -280,33 +315,55 @@ nav .logo {
 }
 
 .projects .filters ul li.is-checked {
-  background-color: blue;
-}
-
-.projects .grid {
+  background: linear-gradient(to right, #4d74e6, #2a57dc);
 }
 
 .projects .grid-item {
   margin: 10px;
+  padding: 30px 10px;
   width: 200px;
   height: 200px;
   background-color: #222;
   overflow: hidden;
   border-radius: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+.projects .grid-item h5 {
+  margin-bottom: 15px;
+}
+
+.projects .grid-item .tech svg {
+  margin: 5px 2px !important;
+  width: 50px;
+  font-size: 25px !important;
 }
 
 .projects .grid-content {
+  background-color: inherit;
   position: absolute;
   top: 0;
   left: 0;
   /* display: none; */
+  padding: 30px 10px;
   height: 200px;
   width: 200px;
   z-index: 10;
-  background-color: aqua;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 1s ease-out;
+}
+
+.projects .grid-item:hover .grid-content {
+  /* opacity: 1;
+  display: block; */
+  visibility: visible;
+  opacity: 1;
+}
+
+.projects .grid-content h5 {
+  margin-bottom: 30px;
 }
 @media only screen and (max-width: 600px) {
   .projects .grid-item {
@@ -319,13 +376,6 @@ nav .logo {
     height: 360px;
     width: 360px;
   }
-}
-
-.projects .grid-item:hover .grid-content {
-  /* opacity: 1;
-  display: block; */
-  visibility: visible;
-  opacity: 1;
 }
 
 /* achievements */
