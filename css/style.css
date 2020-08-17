@@ -335,6 +335,7 @@ nav .logo {
 }
 
 .projects .grid-item .tech svg {
+  color: gray;
   margin: 5px 2px !important;
   width: 50px;
   font-size: 25px !important;
@@ -352,7 +353,7 @@ nav .logo {
   z-index: 10;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 1s ease-out;
+  transition: visibility 0s, opacity 0.3s ease-out;
 }
 
 .projects .grid-item:hover .grid-content {
@@ -360,6 +361,7 @@ nav .logo {
   display: block; */
   visibility: visible;
   opacity: 1;
+  transition: visibility 0s, opacity 0.3s ease-out;
 }
 
 .projects .grid-content h5 {
@@ -384,16 +386,9 @@ nav .logo {
   padding: 30px;
 }
 
-.achievement {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .achievement .content {
-  margin-bottom: 30px;
-  width: 450px;
+  padding: 10px;
+  /* width: 450px; */
   height: 330px;
   background-color: aqua;
   border-radius: 5px;
