@@ -63,8 +63,31 @@ main section {
 }
 
 ::selection {
-  -color: white;
+  background-color: white;
   color: black;
+}
+
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 5px 0;
+}
+
+.pd-10 {
+  padding: 10px !important;
+}
+
+.round {
+  border-radius: 50% !important;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #428bca;
+  text-decoration: none;
 }
 
 /* NAV  */
@@ -127,7 +150,7 @@ nav .logo {
   font-weight: 900;
   font-size: 16px;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
   nav ul {
     padding: 5px;
   }
@@ -139,19 +162,13 @@ nav .logo {
   }
 
   nav ul li a {
-    padding: 0 15px 2px;
+    padding: 0 10px 2px;
     text-decoration: none;
     color: #fff;
   }
 
   nav ul li a:hover {
     text-decoration: none;
-    color: #fff;
-  }
-
-  .active {
-    background-color: blue;
-    border-radius: 20px;
     color: #fff;
   }
 
@@ -177,12 +194,13 @@ nav .logo {
 .background-img {
   position: fixed;
   z-index: -1;
-  width: 100%;
-  height: 100vh;
-  background-color: #222;
-  /* background-image: url(https://cdn.wallpapersafari.com/74/99/M67dUT.jpg); */
+  /* height: 100vh; */
+  background-color: #060d3b;
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: auto;
+  text-align: center;
+  filter: saturate(50%);
 }
 
 .intro {
@@ -227,10 +245,34 @@ nav .logo {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+.profileimg-container img {
+  /* width: 350px; */
+  filter: grayscale(75%);
+  height: 350px;
+  padding: 5px;
+}
+
 @media only screen and (min-width: 1024px) {
   .profileimg-container {
-    width: 450px;
-    height: 450px;
+    width: 420px;
+    height: 420px;
+  }
+  .profileimg-container img {
+    height: 420px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .profileimg-container {
+    width: 500px;
+    height: 500px;
+  }
+  .profileimg-container img {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .profileimg-container {
+    margin-bottom: 75px;
   }
 }
 
@@ -311,11 +353,6 @@ nav .logo {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
-.exp-content hr {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin: 5px 0;
-}
-
 @media only screen and (max-width: 1024px) {
   .exp-content {
     max-width: 400px;
@@ -364,11 +401,12 @@ nav .logo {
   padding: 30px 10px;
   width: 200px;
   height: 200px;
-  background-color: #222;
+  /* background-color: #222; */
   overflow: hidden;
   border-radius: 5px;
   color: #fff;
   text-align: center;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .projects .grid-item h5 {
@@ -386,7 +424,7 @@ nav .logo {
 }
 
 .projects .grid-content {
-  background-color: inherit;
+  background-color: #252535;
   position: absolute;
   top: 0;
   left: 0;
@@ -414,13 +452,13 @@ nav .logo {
 @media only screen and (max-width: 600px) {
   .projects .grid-item {
     margin: 15px;
-    width: 360px;
-    height: 360px;
+    width: 300px;
+    height: 300px;
   }
 
   .projects .grid-content {
-    height: 360px;
-    width: 360px;
+    height: 300px;
+    width: 300px;
   }
 }
 
@@ -437,13 +475,32 @@ nav .logo {
 }
 
 .achievement .content {
-  margin: 10px;
+  color: #fff;
+  padding: 20px;
+  margin: 30px 10px;
   width: 45%;
-  height: 330px;
   border-radius: 5px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.achievement .content .wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.achievement .content img {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 100px;
+  max-height: 65px;
+  margin-right: 15px;
+}
+
+.achievement .content p {
+  margin: 25px 0;
 }
 
 @media only screen and (max-width: 768px) {
