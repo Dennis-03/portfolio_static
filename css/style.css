@@ -1,7 +1,15 @@
 /* GLOBAL  */
 main section {
-  padding: 65px 0 !important;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 100px 0 !important;
+  /* box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1); */
+  top: -10px;
+}
+
+main section > div {
+  /* padding: 10px; */
+  /* background-color: aquamarine; */
+  /* margin-top: 100px !important; */
+  /* margin-bottom: 60px !important; */
 }
 
 main section:nth-child(odd) {
@@ -150,13 +158,23 @@ nav .logo {
   font-weight: 900;
   font-size: 16px;
 }
+
+@media only screen and (max-width: 425px) {
+  nav ul li {
+    padding: 3px !important;
+  }
+  nav .logo {
+    font-weight: 900;
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 768px) {
   nav ul {
-    padding: 5px;
+    /* padding: 3px; */
   }
 
   nav ul li {
-    padding: 5px;
+    padding: 3px;
     display: inline;
     text-decoration: none;
   }
@@ -227,9 +245,6 @@ nav .logo {
 }
 
 /* ABOUT ME  */
-.about-me {
-  padding: 50px;
-}
 
 .about-me-wrapper {
   display: flex;
@@ -248,7 +263,7 @@ nav .logo {
 .profileimg-container img {
   /* width: 350px; */
   filter: grayscale(75%);
-  height: 350px;
+  height: 300px;
   padding: 5px;
 }
 
@@ -353,6 +368,12 @@ nav .logo {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
+.exp-content p {
+  padding: 10px 3px;
+  color: #ddd;
+  font-weight: 200;
+}
+
 @media only screen and (max-width: 1024px) {
   .exp-content {
     max-width: 400px;
@@ -438,6 +459,11 @@ nav .logo {
   transition: visibility 0s, opacity 0.3s ease-out;
 }
 
+.projects .grid-content a {
+  display: block;
+  padding: 7px;
+}
+
 .projects .grid-item:hover .grid-content {
   /* opacity: 1;
   display: block; */
@@ -459,6 +485,18 @@ nav .logo {
   .projects .grid-content {
     height: 300px;
     width: 300px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .projects .grid-item {
+    margin: 15px;
+    width: 260px;
+    height: 260px;
+  }
+
+  .projects .grid-content {
+    height: 260px;
+    width: 260px;
   }
 }
 
