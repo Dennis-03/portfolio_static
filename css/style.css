@@ -280,6 +280,9 @@ nav .logo {
   .profileimg-container img {
     height: 300px;
   }
+  .about-me .btn-custom {
+    font-size: 14px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .profileimg-container {
